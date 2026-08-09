@@ -381,3 +381,12 @@ transition: 0.3s ease;
 .back-link:hover {
 color: #8b0000;
 }
+.top-back {
+display: block;
+width: fit-content;
+margin: 0 auto 55px;
+}
+
+.top-back:hover {
+color: #8b0000;
+}
