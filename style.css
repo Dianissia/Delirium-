@@ -307,3 +307,77 @@ nav a {
 }
 
 }
+/* ===== NIGHT MONSTER STORY ===== */
+
+.story-page {
+width: 820px;
+max-width: 88%;
+margin: 0 auto;
+padding-top: 150px;
+padding-bottom: 100px;
+}
+
+.story-header {
+text-align: center;
+margin-bottom: 75px;
+}
+
+.story-header h1 {
+margin: 0;
+font-family: 'Playfair Display', serif;
+font-size: 58px;
+font-weight: 400;
+letter-spacing: 2px;
+line-height: 1.2;
+}
+
+.story-line {
+width: 65px;
+height: 2px;
+background: #8b0000;
+margin: 25px auto 20px;
+}
+
+.story-author {
+margin: 0;
+color: #777;
+font-family: 'Playfair Display', serif;
+font-size: 13px;
+letter-spacing: 4px;
+text-transform: uppercase;
+}
+
+.story-text {
+max-width: 760px;
+margin: 0 auto;
+font-family: 'Playfair Display', serif;
+font-size: 19px;
+line-height: 2;
+color: #d0d0d0;
+text-align: left;
+}
+
+.story-text p {
+margin: 0 0 34px;
+text-indent: 38px;
+}
+
+.story-text p:first-child {
+text-indent: 0;
+}
+
+.back-link {
+display: block;
+width: fit-content;
+margin: 80px auto 0;
+color: #777;
+font-family: 'Playfair Display', serif;
+font-size: 13px;
+letter-spacing: 3px;
+text-decoration: none;
+transition: 0.3s ease;
+}
+
+.back-link:hover {
+color: #8b0000;
+}
