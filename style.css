@@ -1,393 +1,309 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&display=swap');
 
-
-/* =========================
-   ОСНОВНОЕ
-========================= */
-
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
+  }
+
+html {
+background: #0b0b0b;
 }
 
 body {
-    margin: 0;
-    background-color: #0b0b0b;
-    color: #e8e8e8;
-    font-family: Arial, sans-serif;
+margin: 0;
+background: #0b0b0b;
+color: #e8e8e8;
+font-family: Arial, sans-serif;
 }
 
-
-/* =========================
-   НАВИГАЦИЯ
-========================= */
-
 nav {
-    position: absolute;
-    top: 30px;
-    left: 0;
-    width: 100%;
-    text-align: center;
-    z-index: 10;
+position: absolute;
+top: 30px;
+left: 0;
+width: 100%;
+text-align: center;
+z-index: 10;
 }
 
 nav a {
-    color: #e8e8e8;
-    margin: 0 20px;
-    text-decoration: none;
-    transition: 0.3s ease;
+display: inline-block;
+margin: 0 20px;
+color: #e8e8e8;
+text-decoration: none;
+font-size: 14px;
+letter-spacing: 2px;
+transition: color 0.3s ease;
 }
 
 nav a:hover {
-    color: #8b0000;
+color: #8b0000;
 }
 
-
 /* =========================
-   ГЛАВНАЯ СТРАНИЦА
+ГОЛОВНА
 ========================= */
 
 .home-page {
-    text-align: center;
-    padding-top: 150px;
+min-height: 100vh;
+}
+
+.home-content {
+min-height: 100vh;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+text-align: center;
+padding: 120px 20px 60px;
 }
 
 .hero-title {
-    margin: 0;
-    font-family: 'Playfair Display', serif;
-    font-size: 70px;
-    font-weight: 400;
-    letter-spacing: 10px;
+margin: 0;
+font-family: 'Playfair Display', serif;
+font-size: 70px;
+font-weight: 400;
+letter-spacing: 10px;
 }
 
-.home-page > p {
-    font-size: 20px;
-    color: #999;
+.hero-subtitle {
+margin: 25px 0 0;
+color: #999;
+font-size: 20px;
+line-height: 1.6;
 }
-
 
 /* =========================
-   СТРАНИЦА РОЗПОВІДІ
+РОЗПОВІДІ
 ========================= */
 
 .stories-page {
-    text-align: center;
-    padding-top: 150px;
+width: 900px;
+max-width: 90%;
+margin: 0 auto;
+padding: 150px 0 100px;
 }
 
 .stories-header {
-    text-align: center;
-    margin-bottom: 70px;
+text-align: center;
+margin-bottom: 65px;
 }
 
 .stories-header h1 {
-    margin: 0 0 18px;
-    font-family: 'Playfair Display', serif;
-    font-size: 70px;
-    font-weight: 400;
-    letter-spacing: 7px;
+margin: 0 0 18px;
+font-family: 'Playfair Display', serif;
+font-size: 58px;
+font-weight: 400;
+letter-spacing: 5px;
 }
 
 .stories-header p {
-    margin: 0;
-    color: #999;
-    font-size: 20px;
+margin: 0;
+color: #999;
+font-size: 18px;
 }
 
-
 /* =========================
-   КАТЕГОРИИ
+КАТЕГОРІЇ
 ========================= */
 
 .categories {
-    width: 900px;
-    max-width: 90%;
-    margin: 0 auto 100px;
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
+display: flex;
+flex-direction: column;
+gap: 25px;
 }
 
 .category-card {
-    position: relative;
-    padding: 45px 50px;
-    border: 1px solid #333;
-    text-align: left;
-    overflow: hidden;
-    transition: 0.4s ease;
+position: relative;
+padding: 45px 50px;
+border: 1px solid #333;
+text-align: left;
+overflow: hidden;
+transition: border-color 0.4s ease, transform 0.4s ease;
 }
 
 .category-card::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 3px;
-    height: 0;
-    background: #8b0000;
-    transition: 0.4s ease;
+content: "";
+position: absolute;
+left: 0;
+top: 0;
+width: 3px;
+height: 0;
+background: #8b0000;
+transition: height 0.4s ease;
 }
 
 .category-card:hover {
-    border-color: #555;
-    transform: translateX(8px);
+border-color: #555;
+transform: translateX(8px);
 }
 
 .category-card:hover::before {
-    height: 100%;
+height: 100%;
 }
 
 .category-number {
-    display: block;
-    margin-bottom: 20px;
-    color: #666;
-    font-size: 13px;
-    letter-spacing: 4px;
+display: block;
+margin-bottom: 20px;
+color: #666;
+font-size: 13px;
+letter-spacing: 4px;
 }
 
-.category-card h2 {
-    margin: 0 0 18px;
-    font-family: 'Playfair Display', serif;
-    font-size: 32px;
-    font-weight: 500;
-    letter-spacing: 3px;
+.category-card > h2 {
+margin: 0 0 18px;
+font-family: 'Playfair Display', serif;
+font-size: 32px;
+font-weight: 500;
+letter-spacing: 3px;
 }
 
-.category-card p {
-    max-width: 600px;
-    margin-top: 0;
-    margin-bottom: 25px;
-    color: #999;
-    line-height: 1.7;
+.category-card > p {
+max-width: 600px;
+margin: 0 0 25px;
+color: #999;
+line-height: 1.7;
 }
 
 .category-card > a {
-    color: #e8e8e8;
-    text-decoration: none;
-    font-size: 13px;
-    letter-spacing: 3px;
-    transition: 0.3s;
+color: #e8e8e8;
+text-decoration: none;
+font-size: 13px;
+letter-spacing: 3px;
+transition: color 0.3s ease;
 }
 
 .category-card > a:hover {
-    color: #8b0000;
+color: #8b0000;
 }
 
-
 /* =========================
-   СПИСОК РАССКАЗОВ
+СПИСОК РОЗПОВІДЕЙ
 ========================= */
 
 .story-list {
-    margin-top: 35px;
+margin-top: 35px;
 }
 
+.story-card,
 .story-item {
-    position: relative;
-    display: flex;
-    align-items: center;
-    gap: 25px;
-    padding: 20px 25px;
-    border-top: 1px solid #333;
-    color: #e8e8e8;
-    text-decoration: none;
-    transition: 0.35s ease;
-    overflow: hidden;
+position: relative;
+display: flex;
+align-items: center;
+gap: 25px;
+width: 100%;
+padding: 20px 25px;
+border-top: 1px solid #333;
+color: #e8e8e8;
+text-decoration: none;
+transition: background 0.35s ease, padding-left 0.35s ease;
 }
 
 .story-item:last-child {
-    border-bottom: 1px solid #333;
+border-bottom: 1px solid #333;
 }
 
+.story-card::before,
 .story-item::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 3px;
-    height: 0;
-    background: #8b0000;
-    transition: 0.35s ease;
+content: "";
+position: absolute;
+left: 0;
+top: 0;
+width: 3px;
+height: 0;
+background: #8b0000;
+transition: height 0.35s ease;
 }
 
+.story-card:hover,
 .story-item:hover {
-    padding-left: 35px;
-    background: rgba(255, 255, 255, 0.02);
+padding-left: 35px;
+background: rgba(255, 255, 255, 0.02);
 }
 
+.story-card:hover::before,
 .story-item:hover::before {
-    height: 100%;
+height: 100%;
 }
 
-.story-item span {
-    color: #666;
-    font-size: 12px;
-    letter-spacing: 2px;
+.story-number,
+.story-item > span {
+flex-shrink: 0;
+color: #666;
+font-size: 12px;
+letter-spacing: 2px;
 }
 
-.story-item strong {
-    font-family: 'Playfair Display', serif;
-    font-size: 21px;
-    font-weight: 500;
-}
-
-
-/* =========================
-   ПЕРВЫЙ РАССКАЗ
-========================= */
-
-.story-card {
-    display: block;
-    width: 100%;
-    margin: 0;
-    padding: 30px;
-    border: 1px solid #333;
-    color: #e8e8e8;
-    text-decoration: none;
-    text-align: left;
-    transition: 0.4s ease;
-}
-
-.story-card:hover {
-    border-color: #8b0000;
-    transform: translateY(-5px);
-}
 .story-card h2 {
-    margin: 0 0 10px;
-    font-family: 'Playfair Display', serif;
-    font-size: 28px;
-    letter-spacing: 2px;
+margin: 0 0 6px;
+font-family: 'Playfair Display', serif;
+font-size: 24px;
+font-weight: 500;
+letter-spacing: 2px;
 }
 
 .story-card p {
-    margin: 0;
-    color: #999;
-    line-height: 1.7;
-    font-size: 16px;
+margin: 0;
+color: #777;
+font-size: 14px;
 }
 
-.story-number {
-    display: block;
-    margin-bottom: 15px;
-    color: #666;
-    font-size: 12px;
-    letter-spacing: 2px;
+.story-item strong {
+font-family: 'Playfair Display', serif;
+font-size: 21px;
+font-weight: 500;
 }
-
 
 /* =========================
-   ОТДЕЛЬНАЯ СТРАНИЦА РАССКАЗА
-========================= */
-
-.story-page {
-    width: 800px;
-    max-width: 88%;
-    margin: 0 auto;
-    padding-top: 150px;
-    padding-bottom: 120px;
-}
-
-.story-header {
-    text-align: center;
-    margin-bottom: 75px;
-}
-
-.story-header h1 {
-    margin: 0 0 18px;
-    font-family: 'Playfair Display', serif;
-    font-size: 52px;
-    font-weight: 400;
-    letter-spacing: 2px;
-}
-
-.story-author {
-    margin: 0;
-    color: #777;
-    font-size: 13px;
-    letter-spacing: 2px;
-}
-
-.story-text {
-    font-family: 'Playfair Display', serif;
-    font-size: 18px;
-    line-height: 2;
-    color: #d0d0d0;
-    text-align: left;
-}
-
-.story-text p {
-    margin: 0 0 30px;
-    text-indent: 35px;
-}
-
-.story-text p:first-child {
-    text-indent: 0;
-}
-
-.story-line {
-    width: 70px;
-    height: 2px;
-    background: #8b0000;
-    margin: 20px auto;
-}
-
-.back-link {
-    display: inline-block;
-    margin-bottom: 70px;
-    color: #777;
-    text-decoration: none;
-    font-size: 12px;
-    letter-spacing: 3px;
-    transition: 0.3s ease;
-}
-
-.back-link:hover {
-    color: #8b0000;
-}
-
-
-/* =========================
-   АДАПТАЦИЯ ДЛЯ ТЕЛЕФОНА
+МОБІЛЬНА ВЕРСІЯ
 ========================= */
 
 @media (max-width: 700px) {
 
-    nav a {
-        margin: 0 8px;
-        font-size: 12px;
-    }
+nav {
+    top: 20px;
+}
 
-    .hero-title {
-        font-size: 48px;
-        letter-spacing: 6px;
-    }
+nav a {
+    margin: 0 8px;
+    font-size: 11px;
+    letter-spacing: 1px;
+}
 
-    .stories-page {
-        padding-top: 130px;
-    }
+.hero-title {
+    font-size: 48px;
+    letter-spacing: 6px;
+}
 
-    .stories-header h1 {
-        font-size: 48px;
-        letter-spacing: 5px;
-    }
+.hero-subtitle {
+    font-size: 16px;
+}
 
-    .stories-header p {
-        font-size: 17px;
-    }
+.stories-page {
+    max-width: 92%;
+    padding-top: 120px;
+}
+.stories-header h1 {
+    font-size: 42px;
+    letter-spacing: 3px;
+}
 
-    .category-card {
-        padding: 30px 25px;
-    }
+.category-card {
+    padding: 30px 25px;
+}
 
-    .category-card h2 {
-        font-size: 27px;
-    }
+.category-card > h2 {
+    font-size: 27px;
+}
 
-    .story-item {
-        gap: 15px;
-        padding: 18px 15px;
-    }
+.story-card,
+.story-item {
+    padding-left: 15px;
+    padding-right: 15px;
+    gap: 15px;
+}
 
-    .story-item strong {
-        font-size: 18px;
-    }
+.story-card h2,
+.story-item strong {
+    font-size: 18px;
+}
+
 }
