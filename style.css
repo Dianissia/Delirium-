@@ -390,3 +390,152 @@ margin: 0 auto 55px;
 .top-back:hover {
 color: #8b0000;
 }
+/* =========================
+   DELIRIUM — ГОЛОВНА
+   ========================= */
+
+.home-content {
+    width: 900px;
+    max-width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Главный экран */
+
+.hero-section {
+    padding-top: 170px;
+}
+
+.hero-section .hero-title {
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+    font-size: 76px;
+    font-weight: 400;
+    letter-spacing: 12px;
+}
+
+.hero-line {
+    width: 70px;
+    height: 2px;
+    background: #8b0000;
+    margin: 25px auto;
+}
+
+.hero-subtitle {
+    max-width: 650px;
+    margin: 0 auto;
+    color: #999;
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    line-height: 1.8;
+}
+
+
+/* Wake up */
+
+.awakening-section {
+    max-width: 650px;
+    margin: 150px auto 0;
+    padding: 50px 0;
+}
+
+.awakening-section p {
+    margin: 0;
+    color: #b0b0b0;
+    font-family: 'Playfair Display', serif;
+    font-size: 21px;
+    line-height: 1.9;
+}
+
+.awakening-section h2 {
+    margin: 35px 0 0;
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 400;
+    letter-spacing: 4px;
+}
+
+
+/* Свіжий погляд */
+
+.fresh-section {
+    margin: 120px auto 0;
+    padding: 50px;
+    border: 1px solid #333;
+    text-align: left;
+    position: relative;
+    transition: 0.4s ease;
+}
+
+.fresh-section:hover {
+    border-color: #555;
+    transform: translateX(8px);
+}
+
+.fresh-section::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 3px;
+    height: 0;
+    background: #8b0000;
+    transition: 0.4s ease;
+}
+
+.fresh-section:hover::before {
+    height: 100%;
+}
+
+.fresh-section .section-number {
+    display: block;
+    margin-bottom: 20px;
+    color: #666;
+    font-size: 13px;
+    letter-spacing: 4px;
+}
+
+.fresh-section h2 {
+    margin: 0 0 20px;
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 500;
+    letter-spacing: 3px;
+}
+
+.fresh-section p {
+    max-width: 600px;
+    margin: 0 0 25px;
+    color: #999;
+    line-height: 1.8;
+    font-size: 17px;
+}
+
+.fresh-section a {
+    color: #e8e8e8;
+    text-decoration: none;
+    font-size: 13px;
+    letter-spacing: 3px;
+    transition: 0.3s;
+}
+
+.fresh-section a:hover {
+    color: #8b0000;
+}
+
+
+/* Финальная фраза */
+
+.final-section {
+    padding: 130px 0 160px;
+}
+
+.final-section p {
+    margin: 0;
+    color: #888;
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-style: italic;
+    letter-spacing: 1px;
+}
