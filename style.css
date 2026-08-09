@@ -1,202 +1,107 @@
-<<<<<<< HEAD
-nav a { @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&display=swap');
-    transition: 0.3s;
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&display=swap');
+
+
+/* =========================
+   ОСНОВНОЕ
+========================= */
+
+* {
+    box-sizing: border-box;
 }
 
-nav a:hover {
-    color: #8b0000 !important;
-}
-h1 {
-    position: relative;
-    display: inline-block;
-}
-
-h1::after {
-    content: "";
-    display: block;
-    width: 100px;
-    height: 2px;
-    background: #8b0000;
-    margin: 20px auto 0;
-}
-.stories-page {
-    text-align: center;
-}
-
-.stories-page p {
-    color: #999;
-    font-size: 18px;
-}
-.story-card {
-    max-width: 600px;
-    margin: 60px auto;
-    padding: 30px;
-    border: 1px solid #333;
-    text-align: left;
-    transition: 0.3s;
-}
-
-.story-card:hover {
-    border-color: #8b0000;
-}
-
-.story-card h2 {
-    margin-top: 0;
-}
-
-.story-card a {
-    color: #0d3902;
-    text-decoration: none;
-}
-
-.story-card a:hover {
-    color: #8b0000;
-}
 body {
+    margin: 0;
     background-color: #0b0b0b;
     color: #e8e8e8;
-    margin: 0;
     font-family: Arial, sans-serif;
 }
 
-.home-page {
-    text-align: center;
-    padding-top: 150px;
-}
 
-.stories-page {
-    text-align: center;
-}
-.page-intro {
-    text-align: center;
-    padding-top: 150px;
-}
+/* =========================
+   НАВИГАЦИЯ
+========================= */
 
-.page-intro p {
-    color: #999;
-    font-size: 20px;
-}
-.page-intro h1 {
-    font-size: 70px;
-    letter-spacing: 10px;
-    margin: 0;
-}
 nav {
     position: absolute;
     top: 30px;
+    left: 0;
     width: 100%;
     text-align: center;
+    z-index: 10;
 }
 
 nav a {
     color: #e8e8e8;
     margin: 0 20px;
     text-decoration: none;
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
 
 nav a:hover {
     color: #8b0000;
 }
-.hero-title {
-    font-size: 70px;
-    letter-spacing: 10px;
-    margin: 0;
-}
-.story-card {
-    width: 600px;
-    max-width: 80%;
-    margin: 70px auto;
-    padding: 35px;
-    border: 1px solid #333;
-    text-align: left;
-    box-sizing: border-box;
-    transition: 0.4s;
-}
 
-.story-card:hover {
-    border-color: #8b0000;
-    transform: translateY(-5px);
-}
 
-.story-card h2 {
-    margin-top: 0;
-    font-size: 28px;
-    letter-spacing: 2px;
-}
+/* =========================
+   ГЛАВНАЯ СТРАНИЦА
+========================= */
 
-.story-card p {
-    color: #999;
-    line-height: 1.7;
-    font-size: 16px;
-}
-
-.story-card a {
-    display: inline-block;
-    margin-top: 15px;
-    color: #e8e8e8;
-    text-decoration: none;
-    letter-spacing: 2px;
-    transition: 0.3s;
-}
-
-.story-card a:hover {
-    color: #8b0000;
-}
-.story-page {
-    max-width: 800px;
-    margin: 0 auto;
-    padding-top: 150px;
+.home-page {
     text-align: center;
+    padding-top: 150px;
 }
 
-.story-line {
-    width: 70px;
-    height: 2px;
-    background: #8b0000;
-    margin: 20px auto;
-}
-
-.story-author {
-    color: #777;
-    font-size: 14px;
-    letter-spacing: 2px;
-}
-
-.story-text {
-    margin-top: 60px;
-    text-align: left;
+.hero-title {
+    margin: 0;
     font-family: 'Playfair Display', serif;
-    font-size: 21px;
-    line-height: 1.9;
-    color: #d0d0d0;
+    font-size: 70px;
+    font-weight: 400;
+    letter-spacing: 10px;
 }
 
-.story-text p {
-    margin-bottom: 32px;
-    text-indent: 35px;
+.home-page > p {
+    font-size: 20px;
+    color: #999;
 }
 
-.story-text p {
-    margin-bottom: 30px;
+
+/* =========================
+   СТРАНИЦА РОЗПОВІДІ
+========================= */
+
+.stories-page {
+    text-align: center;
+    padding-top: 150px;
 }
 
-.back-link {
-    display: inline-block;
-    margin-top: 60px;
-    color: #e8e8e8;
-    text-decoration: none;
-    letter-spacing: 2px;
-    transition: 0.3s;
+.stories-header {
+    text-align: center;
+    margin-bottom: 70px;
 }
 
-.back-link:hover {
-    color: #8b0000;
+.stories-header h1 {
+    margin: 0 0 18px;
+    font-family: 'Playfair Display', serif;
+    font-size: 70px;
+    font-weight: 400;
+    letter-spacing: 7px;
 }
+
+.stories-header p {
+    margin: 0;
+    color: #999;
+    font-size: 20px;
+}
+
+
+/* =========================
+   КАТЕГОРИИ
+========================= */
+
 .categories {
     width: 900px;
     max-width: 90%;
-    margin: 70px auto;
+    margin: 0 auto 100px;
     display: flex;
     flex-direction: column;
     gap: 25px;
@@ -249,12 +154,13 @@ nav a:hover {
 
 .category-card p {
     max-width: 600px;
+    margin-top: 0;
     margin-bottom: 25px;
     color: #999;
     line-height: 1.7;
 }
 
-.category-card a {
+.category-card > a {
     color: #e8e8e8;
     text-decoration: none;
     font-size: 13px;
@@ -262,9 +168,15 @@ nav a:hover {
     transition: 0.3s;
 }
 
-.category-card a:hover {
+.category-card > a:hover {
     color: #8b0000;
 }
+
+
+/* =========================
+   СПИСОК РАССКАЗОВ
+========================= */
+
 .story-list {
     margin-top: 35px;
 }
@@ -317,24 +229,61 @@ nav a:hover {
     font-size: 21px;
     font-weight: 500;
 }
+
+
+/* =========================
+   ПЕРВЫЙ РАССКАЗ
+========================= */
+
+.story-card {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 30px;
+    border: 1px solid #333;
+    color: #e8e8e8;
+    text-decoration: none;
+    text-align: left;
+    transition: 0.4s ease;
+}
+
+.story-card:hover {
+    border-color: #8b0000;
+    transform: translateY(-5px);
+}
+.story-card h2 {
+    margin: 0 0 10px;
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    letter-spacing: 2px;
+}
+
+.story-card p {
+    margin: 0;
+    color: #999;
+    line-height: 1.7;
+    font-size: 16px;
+}
+
+.story-number {
+    display: block;
+    margin-bottom: 15px;
+    color: #666;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+
+/* =========================
+   ОТДЕЛЬНАЯ СТРАНИЦА РАССКАЗА
+========================= */
+
 .story-page {
     width: 800px;
     max-width: 88%;
-    margin: 80px auto 120px;
-}
-
-.back-link {
-    display: inline-block;
-    margin-bottom: 70px;
-    color: #777;
-    text-decoration: none;
-    font-size: 12px;
-    letter-spacing: 3px;
-    transition: 0.3s ease;
-}
-
-.back-link:hover {
-    color: #8b0000;
+    margin: 0 auto;
+    padding-top: 150px;
+    padding-bottom: 120px;
 }
 
 .story-header {
@@ -362,6 +311,7 @@ nav a:hover {
     font-size: 18px;
     line-height: 2;
     color: #d0d0d0;
+    text-align: left;
 }
 
 .story-text p {
@@ -371,156 +321,6 @@ nav a:hover {
 
 .story-text p:first-child {
     text-indent: 0;
-=======
-nav a { @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&display=swap');
-    transition: 0.3s;
-}
-
-nav a:hover {
-    color: #8b0000 !important;
-}
-h1 {
-    position: relative;
-    display: inline-block;
-}
-
-h1::after {
-    content: "";
-    display: block;
-    width: 100px;
-    height: 2px;
-    background: #8b0000;
-    margin: 20px auto 0;
-}
-.stories-page {
-    text-align: center;
-}
-
-.stories-page p {
-    color: #999;
-    font-size: 18px;
-}
-.story-card {
-    max-width: 600px;
-    margin: 60px auto;
-    padding: 30px;
-    border: 1px solid #333;
-    text-align: left;
-    transition: 0.3s;
-}
-
-.story-card:hover {
-    border-color: #8b0000;
-}
-
-.story-card h2 {
-    margin-top: 0;
-}
-
-.story-card a {
-    color: #0d3902;
-    text-decoration: none;
-}
-
-.story-card a:hover {
-    color: #8b0000;
-}
-body {
-    background-color: #0b0b0b;
-    color: #e8e8e8;
-    margin: 0;
-    font-family: Arial, sans-serif;
-}
-
-.home-page {
-    text-align: center;
-    padding-top: 150px;
-}
-
-.stories-page {
-    text-align: center;
-}
-.page-intro {
-    text-align: center;
-    padding-top: 150px;
-}
-
-.page-intro p {
-    color: #999;
-    font-size: 20px;
-}
-.page-intro h1 {
-    font-size: 70px;
-    letter-spacing: 10px;
-    margin: 0;
-}
-nav {
-    position: absolute;
-    top: 30px;
-    width: 100%;
-    text-align: center;
-}
-
-nav a {
-    color: #e8e8e8;
-    margin: 0 20px;
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-nav a:hover {
-    color: #8b0000;
-}
-.hero-title {
-    font-size: 70px;
-    letter-spacing: 10px;
-    margin: 0;
-}
-.story-card {
-    width: 600px;
-    max-width: 80%;
-    margin: 70px auto;
-    padding: 35px;
-    border: 1px solid #333;
-    text-align: left;
-    box-sizing: border-box;
-    transition: 0.4s;
-}
-
-.story-card:hover {
-    border-color: #8b0000;
-    transform: translateY(-5px);
-}
-
-.story-card h2 {
-    margin-top: 0;
-    font-size: 28px;
-    letter-spacing: 2px;
-}
-
-.story-card p {
-    color: #999;
-    line-height: 1.7;
-    font-size: 16px;
-}
-
-.story-card a {
-    display: inline-block;
-    margin-top: 15px;
-    color: #e8e8e8;
-    text-decoration: none;
-    letter-spacing: 2px;
-    transition: 0.3s;
-}
-
-.story-card a:hover {
-    color: #8b0000;
-}
-.story-page {
-    max-width: 800px;
-    margin: 0 auto;
-    padding-top: 150px;
-    text-align: center;
 }
 
 .story-line {
@@ -530,40 +330,64 @@ nav a:hover {
     margin: 20px auto;
 }
 
-.story-author {
-    color: #777;
-    font-size: 14px;
-    letter-spacing: 2px;
-}
-
-.story-text {
-    margin-top: 60px;
-    text-align: left;
-    font-family: 'Playfair Display', serif;
-    font-size: 21px;
-    line-height: 1.9;
-    color: #d0d0d0;
-}
-
-.story-text p {
-    margin-bottom: 32px;
-    text-indent: 35px;
-}
-
-.story-text p {
-    margin-bottom: 30px;
-}
-
 .back-link {
     display: inline-block;
-    margin-top: 60px;
-    color: #e8e8e8;
+    margin-bottom: 70px;
+    color: #777;
     text-decoration: none;
-    letter-spacing: 2px;
-    transition: 0.3s;
+    font-size: 12px;
+    letter-spacing: 3px;
+    transition: 0.3s ease;
 }
 
 .back-link:hover {
     color: #8b0000;
->>>>>>> origin/main
+}
+
+
+/* =========================
+   АДАПТАЦИЯ ДЛЯ ТЕЛЕФОНА
+========================= */
+
+@media (max-width: 700px) {
+
+    nav a {
+        margin: 0 8px;
+        font-size: 12px;
+    }
+
+    .hero-title {
+        font-size: 48px;
+        letter-spacing: 6px;
+    }
+
+    .stories-page {
+        padding-top: 130px;
+    }
+
+    .stories-header h1 {
+        font-size: 48px;
+        letter-spacing: 5px;
+    }
+
+    .stories-header p {
+        font-size: 17px;
+    }
+
+    .category-card {
+        padding: 30px 25px;
+    }
+
+    .category-card h2 {
+        font-size: 27px;
+    }
+
+    .story-item {
+        gap: 15px;
+        padding: 18px 15px;
+    }
+
+    .story-item strong {
+        font-size: 18px;
+    }
 }
